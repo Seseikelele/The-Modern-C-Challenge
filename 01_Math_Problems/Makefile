@@ -1,7 +1,16 @@
 CC=g++
 
-%.o: %.cpp
-	$(CC) -c -o $@ $< --std=c++11
+all:\
+problem001.exe\
+problem002.exe\
+problem003.exe
 
-problem001.exe: problem001.o
-	$(CC) -o problem001.exe problem001.o
+clean:
+	rm -f ./*.o
+	rm -f ./*.exe
+
+%.o: %.cpp
+	$(CC) -c -o $@ $^ --std=c++11
+
+%.exe: %.o
+	$(CC) -o $@ $^
