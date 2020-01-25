@@ -1,10 +1,14 @@
 CC=g++
 
-all:\
-problem001.exe\
-problem002.exe\
-problem003.exe\
-problem004.exe
+SOURCES=\
+	problem001.exe\
+	problem002.exe\
+	problem003.exe\
+	problem004.exe\
+	problem005.exe\
+	problem006.exe
+
+all: $(SOURCES)
 
 clean:
 	rm -f ./*.o
