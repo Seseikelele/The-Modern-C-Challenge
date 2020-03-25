@@ -37,4 +37,4 @@ int main()
 	cin >> limit;
 
 	print_abundant(limit);
-}//abundance
+}
